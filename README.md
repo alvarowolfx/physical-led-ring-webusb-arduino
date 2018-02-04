@@ -27,8 +27,7 @@ I used Platform.io to write this project. I recommend to use it with the Visual 
 
 ## References
 
-* https://github.com/mongoose-os-apps/example-rpc-c
-* https://github.com/mongoose-os-libs/pppos
-* GPS NMEA Tracker - https://github.com/kosma/minmea
+* https://github.com/webusb/arduino
+* https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
