@@ -1,0 +1,23 @@
+{
+  "name": "webapp",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://alvarowolfx.github.io/physical-led-ring-webusb-arduino",
+  "dependencies": {
+    "gh-pages": "^1.1.0",
+    "react": "^16.2.0",
+    "react-color": "^2.13.8",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "react-scripts": "1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
