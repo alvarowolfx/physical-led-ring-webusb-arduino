@@ -7,7 +7,8 @@
 #define NUMPIXELS 16
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
-WebUSB WebUSBSerial(1, "localhost:3000");
+//WebUSB WebUSBSerial(1, "localhost:3000");
+WebUSB WebUSBSerial(1, "alvarowolfx.github.io/physical-led-ring-webusb-arduino");
 
 //#define Serial WebUSBSerial
 
