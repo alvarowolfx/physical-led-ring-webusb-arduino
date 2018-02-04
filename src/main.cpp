@@ -40,6 +40,8 @@ void loop()
             int red = color[1];
             int green = color[2];
             int blue = color[3];
+
+            // Turn all leds if receives 255
             if (ledIndex == 255)
             {
                 for (int i = 0; i < NUMPIXELS; i++)
@@ -47,7 +49,7 @@ void loop()
                     pixels.setPixelColor(i, pixels.Color(red, green, blue));
                 }
             }
-            else
+            else if (ledIndex < NUMPIXELS)
             {
                 pixels.setPixelColor(ledIndex, pixels.Color(red, green, blue));
             }
