@@ -6,6 +6,7 @@ export function getPorts() {
 
 export function requestPort() {
   const filters = [
+    { vendorId: 0x2341, productId: 0x0037 },
     { vendorId: 0x2341, productId: 0x8036 },
     { vendorId: 0x2341, productId: 0x8037 },
     { vendorId: 0x2341, productId: 0x804d },
