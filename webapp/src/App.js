@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import { SketchPicker } from 'react-color';
+import { Throttle } from 'react-throttle';
 import './App.css';
 import { getPorts, requestPort } from './Serial';
 import LedRing from './LedRing';
@@ -122,16 +123,20 @@ class App extends Component {
         );
 
         port.onReceive = data => {
+          /*
           let textDecoder = new TextDecoder();
           console.log(textDecoder.decode(data));
+          */
         };
+
         port.onReceiveError = error => {
           console.error(error);
+          this.onConnectClick();
         };
       },
       error => {
         console.error(error);
-        this.setState({});
+        this.onConnectClick();
       }
     );
   };
@@ -304,10 +309,12 @@ class App extends Component {
               onLedClickWithIndex={this.onLedClickWithIndex}
             />
             <br />
-            <SketchPicker
-              color={selectedColor}
-              onChangeComplete={this.handleColorChange}
-            />
+            <Throttle time="200" handler="onChange">
+              <SketchPicker
+                color={selectedColor}
+                onChange={this.handleColorChange}
+              />
+            </Throttle>
           </div>
         </div>
       </div>
